@@ -1,0 +1,2 @@
+pip install notebook
+pip install psycopg2-binary pandas matplotlib seaborn

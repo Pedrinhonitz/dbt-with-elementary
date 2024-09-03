@@ -49,6 +49,20 @@ CREATE TABLE orders (
     customer_id INT REFERENCES customers(customer_id),
     amount DECIMAL(10, 2)
 );
+
+INSERT INTO customers (customer_name, email) VALUES
+('Alice Smith', 'alice.smith@example.com'),
+('Bob Johnson', 'bob.johnson@example.com'),
+('Carol Williams', 'carol.williams@example.com'),
+('David Brown', 'david.brown@example.com');
+
+INSERT INTO orders (customer_id, amount) VALUES
+(1, 100.50),
+(1, 200.75),
+(2, 50.00),
+(3, 75.25),
+(4, 300.00),
+(2, 150.40);
 ```
 Criando os modelos DBT
 ```sql
@@ -93,8 +107,51 @@ GROUP BY
 Instalando, Configurando e Testando o Elementary
 ```shell
 pip install elementary-data
-edr init
-edr start
+dbt deps
+dbt run --select elementary
 dbt run
-edr test
 ```
+Conectando ao PSQL
+```shell
+docker exec -it postgres-dbt psql -U postgres
+```
+Verificando as tabelas pelo PSQL
+```SQL
+SELECT 
+    tablename
+FROM 
+    pg_tables
+WHERE 
+    schemaname = 'public';
+
+SELECT 
+    tablename
+FROM 
+    pg_tables
+WHERE 
+    schemaname = 'public_elementary';
+```
+
+
+tabelas criadas no public
+customers
+orders
+customers_orders
+
+tabelas criadas no public_elementary
+dbt_models
+dbt_sources
+test_result_rows
+dbt_run_results
+dbt_tests
+data_monitoring_metrics
+dbt_columns
+dbt_seeds
+elementary_test_results
+metadata
+dbt_exposures
+dbt_snapshots
+dbt_invocations
+dbt_metrics
+dbt_source_freshness_results
+schema_columns_snapshot

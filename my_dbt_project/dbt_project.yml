@@ -24,7 +24,17 @@ clean-targets:
 
 
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
+  ## see docs: https://docs.elementary-data.com/
 
 models:
   my_dbt_project:
-    +materialized: view
+    +materialized: table
+  elementary:
+    +schema: "elementary"
+    ## To disable elementary for dev, uncomment this:
+    # enabled: "{{ target.name in ['prod','analytics'] }}"
+
+# Required from dbt 1.8 and above for certain Elementary features
+flags:
+  require_explicit_package_overrides_for_builtin_materializations: False
+  source_freshness_run_project_hooks: True
