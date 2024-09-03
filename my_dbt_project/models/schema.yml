@@ -60,3 +60,4 @@ models:
         description: "Valor do pedido"
         tests:
           - not_null
+          
