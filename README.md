@@ -8,12 +8,11 @@
 <h1 align="center">DBT e Elementary</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Pedrinhonitz/dbt_project?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Pedrinhonitz/dbt_project?color=56BEB8&logo=github">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/Pedrinhonitz/dbt_project?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/Pedrinhonitz/dbt_project?color=56BEB8&logo=github">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Pedrinhonitz/dbt_project?color=56BEB8">
-
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Pedrinhonitz/dbt_project?color=56BEB8&logo=github">
 </p>
 
 <p align="center">
