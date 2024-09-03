@@ -11,22 +11,52 @@ sources:
         description: "Tabela contendo os detalhes dos clientes"
 
 models:
-  - name: orders
-    description: "Modelo que representa pedidos de clientes."
-    columns:
-      - name: order_id
-        description: "ID do pedido"
-      - name: customer_id
-        description: "ID do cliente que fez o pedido"
-      - name: amount
-        description: "Valor do pedido"
-
-  - name: customers_orders
-    description: "Modelo que combina informações de clientes com pedidos."
+  - name: customers
+    description: "Tabela de clientes"
     columns:
       - name: customer_id
         description: "ID do cliente"
+        tests:
+          - unique
+          - not_null
+      - name: customer_name
+        description: "Nome do cliente"
+        tests:
+          - not_null
+      - name: email
+        description: "Email do cliente"
+        tests:
+          - unique
+          - not_null
+    tests:
+      - simple_fail_test
+      - dbt_utils.equality:
+          compare_model: ref('customers')
+      - dbt_utils.unique:
+          column_name: customer_id
+      - dbt_utils.not_null:
+          column_name: customer_id
+      - custom_test:
+          query: |
+            SELECT COUNT(*) AS count
+            FROM {{ ref('customers') }}
+            WHERE customer_id > 1000
+          description: "Test if there are any customers with an ID greater than 1000."
+          expected: 0
+
+  - name: orders
+    description: "Tabela de pedidos"
+    columns:
       - name: order_id
         description: "ID do pedido"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "ID do cliente que fez o pedido"
+        tests:
+          - not_null
       - name: amount
         description: "Valor do pedido"
+        tests:
+          - not_null

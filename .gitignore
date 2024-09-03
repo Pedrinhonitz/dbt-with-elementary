@@ -1,0 +1,3 @@
+dbt-env/
+edr_target/
+logs/
