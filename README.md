@@ -20,7 +20,8 @@
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-como-usar">Como Usar</a> &#xa0; | &#xa0;
-  <a href="#rocket-comandos-para-instalação-e-execução">Comandos para Instalação e Execução</a> &#xa0; | &#xa0;
+  <a href="#gear-comandos-para-instala%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o">Comandos para Instalação e Execução</a> &#xa0; | &#xa0;
+  <a href="#books-padr%C3%B5es-de-commits">Padrões de Commits</a> &#xa0; | &#xa0;
   <a href="https://github.com/Pedrinhonitz" target="_blank">Autor</a>
 </p>
 
