@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: data-lake
+    database: postgres
+    schema: public
+    tables:
+      - name: orders
+        description: "Tabela contendo os detalhes dos pedidos"
+      - name: customers
+        description: "Tabela contendo os detalhes dos clientes"
+
+models:
+  - name: orders
+    description: "Modelo que representa pedidos de clientes."
+    columns:
+      - name: order_id
+        description: "ID do pedido"
+      - name: customer_id
+        description: "ID do cliente que fez o pedido"
+      - name: amount
+        description: "Valor do pedido"
+
+  - name: customers_orders
+    description: "Modelo que combina informações de clientes com pedidos."
+    columns:
+      - name: customer_id
+        description: "ID do cliente"
+      - name: order_id
+        description: "ID do pedido"
+      - name: amount
+        description: "Valor do pedido"
