@@ -20,7 +20,7 @@
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-como-usar">Como Usar</a> &#xa0; | &#xa0;
-  <a href="#rocket-comandos-para-instalação-e_execução">Comandos para Instalação e Execução</a> &#xa0; | &#xa0;
+  <a href="#rocket-comandos-para-instalação-e-execução">Comandos para Instalação e Execução</a> &#xa0; | &#xa0;
   <a href="https://github.com/Pedrinhonitz" target="_blank">Autor</a>
 </p>
 
@@ -63,9 +63,9 @@ $ dbt debug
 $ dbt run
 ```
 
-## :dart: Comandos para Instalação e Execução ##
+## :gear: Comandos para Instalação e Execução ##
 
-Installando o Docker
+Instalando o Docker
 ```bash
 # Atualiza o Pacote de Instalação
 $ sudo apt-get update
@@ -285,6 +285,51 @@ tabelas criadas no __public_elementary__
 - dbt_metrics
 - dbt_source_freshness_results
 - schema_columns_snapshot
+
+## :books: Padrões de Commits ##
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo de commit</th>
+      <th>Emojis</th>
+      <th>Palavra-chave</th>
+    </tr>
+  </thead>
+ <tbody>
+    <tr>
+      <td>Correção</td>
+      <td>🐛 <code>:bug:</code></td>
+      <td><code>fix</code></td>
+    </tr>
+    <tr>
+      <td>Documentação</td>
+      <td>📚 <code>:books:</code></td>
+      <td><code>docs</code></td>
+    </tr>
+    <tr>
+      <td>Estrutura do Projeto</td>
+      <td>🧱 <code>:bricks:</code></td>
+      <td><code>ci</code></td>
+    </tr>
+    <tr>
+      <td>Novo recurso</td>
+      <td>✨ <code>:sparkles:</code></td>
+      <td><code>feat</code></td>
+    </tr>
+    <tr>
+      <td>Testes</td>
+      <td>🧪 <code>:test_tube:</code></td>
+      <td><code>test</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
 
 #
 Feito por <a href="https://github.com/Pedrinhonitz" target="_blank">Pedrinhonitz</a>
